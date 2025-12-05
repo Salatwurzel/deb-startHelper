@@ -7,12 +7,11 @@ plugins {
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
     alias(libs.plugins.composeHotReload)
-    id("com.gradleup.shadow") version "9.2.2"
 }
 
 kotlin {
     jvm()
-
+    jvmToolchain(21)
     sourceSets {
         commonMain.dependencies {
             implementation(compose.runtime)

@@ -18,6 +18,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import deb_starthelper.logic.installStandardFirefox
 import deb_starthelper.theme.AppTypography
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import deb_starthelper.theme.ColorTheme
@@ -43,11 +44,11 @@ fun App() {
                     Spacer(Modifier.height(75.dp))
                 }
 
-                SharpButton(onClick = {deb_starthelper.logic.enableContribNonfree()}, Modifier.fillMaxWidth()) {
-                    Row(Modifier.fillMaxWidth()){Text("Switch to normal Firefox")}
+                SharpButton(onClick = { installStandardFirefox() }, Modifier.fillMaxWidth()) {
+                    Row(Modifier.fillMaxWidth()){Text("Switch to standard Firefox (Flatpak)")}
                 }
 
-                SharpButton(onClick = {deb_starthelper.logic.enableContribNonfree()}, Modifier.fillMaxWidth()) {
+                SharpButton(onClick = {deb_starthelper.logic.installDashToPanel()}, Modifier.fillMaxWidth()) {
                     Row(Modifier.fillMaxWidth()){Text("Install Taskbar (Gnome)")}
                 }
 
@@ -55,11 +56,11 @@ fun App() {
                     Row(Modifier.fillMaxWidth()){Text("Enable contrib+nonfree repos")}
                 }
 
-                SharpButton(onClick = {deb_starthelper.logic.installRustSDK()}, Modifier.fillMaxWidth()) {
+                SharpButton(onClick = {deb_starthelper.logic.installBackportsKernel()}, Modifier.fillMaxWidth()) {
                     Row(Modifier.fillMaxWidth()){Text("Install latest backports Kernel")}
                 }
 
-                SharpButton(onClick = {}, Modifier.fillMaxWidth()) {
+                SharpButton(onClick = {deb_starthelper.logic.installFlathub()}, Modifier.fillMaxWidth()) {
                     Row(Modifier.fillMaxWidth()){Text("Install Flatpak+Flathub")}
                 }
 
