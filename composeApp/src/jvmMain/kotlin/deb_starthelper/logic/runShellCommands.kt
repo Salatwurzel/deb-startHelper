@@ -1,3 +1,5 @@
+@file:Suppress("SimplifyBooleanWithConstants")
+
 package deb_starthelper.logic
 
 fun runShellCommands(
@@ -34,8 +36,15 @@ fun runShellCommands(
         closeMessage += "read;"
 
     }
+    if (openNewTerminalWindow == true) {
+        val pb = ProcessBuilder("x-terminal-emulator", "-e", "/usr/bin/env bash -c \"$allCommandsInOneString $closeMessage\"")
+        pb.inheritIO()
+        pb.start()
+    }
 
-    val pb = ProcessBuilder("x-terminal-emulator", "-e", "/usr/bin/env bash -c \"$allCommandsInOneString $closeMessage\"")
-    pb.inheritIO()
-    pb.start()
+    if (openNewTerminalWindow == false){
+        val pb = ProcessBuilder("/bin/bash", "-c", "\"$allCommandsInOneString $closeMessage\"")
+        pb.inheritIO()
+        pb.start()
+    }
 }

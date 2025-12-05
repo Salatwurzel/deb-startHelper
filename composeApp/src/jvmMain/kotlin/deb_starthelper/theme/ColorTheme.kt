@@ -8,7 +8,7 @@ class ColorTheme {
     val darkInner = Color(0xFF2e2e32)
 
     private val colorDarkPrimary = Color(0xFF282828)
-    private val colorDarkPrimaryTest = Color(0xFF042649)
+    private val colorDarkPrimaryTest = Color(0xFF0A3976)
     private val colorDarkPrimaryTestNew = Color(0xFF2F2936)
 
     private val buttonColorLightBlue = Color(0xFFFFFFFF)
