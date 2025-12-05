@@ -1,6 +1,6 @@
 # deb-startHelper
 
-A personal tool made for fresh Debian installations.
+Small and simple GUI-Application, made for Debian 13 after a fresh installation.
 
 ### **Currently in alpha, things may break!**
 
