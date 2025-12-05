@@ -7,7 +7,7 @@ import androidx.compose.ui.window.application
 import java.time.LocalDateTime
 import kotlin.system.exitProcess
 
-const val version = "0.1-Alpha"
+const val version = "0.1"
 
 fun main() = application {
     println(LocalDateTime.now().toString() + " - Application started")
